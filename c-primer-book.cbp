@@ -31,15 +31,7 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="Ch02/butler.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="Ch02/butler.h" />
-		<Unit filename="Ch02/dvds.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="Ch02/dvds.h" />
-		<Unit filename="Ch02/two_func_et.c">
+		<Unit filename="Ch02/ex_2_8.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions />
