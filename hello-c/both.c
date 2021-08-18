@@ -1,4 +1,4 @@
-// [eric@linux-x2vq code]$ gcc -o both both.c hello_fn.c hello.h
+// [eric@linux-x2vq code]$ gcc most.c hello_fn.c hello.h -o both
 #include "hello.h"
 
 int main (void)
