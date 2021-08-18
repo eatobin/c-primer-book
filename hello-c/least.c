@@ -1,4 +1,4 @@
-// [eric@linux-x2vq code]$ gcc least.c hello_fn.c hello.h -o nope
+// [eric@linux-x2vq code]$ gcc -o nope least.c hello_fn.c hello.h
 #include "hello.h"
 
 int main(void) {
