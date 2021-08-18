@@ -1,2 +1,2 @@
 // Function prototype
-void hello (const char *name);
+void hello(const char *name);

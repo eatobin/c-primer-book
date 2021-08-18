@@ -1,7 +1,7 @@
-#include <stdio.h>
 #include "butler.h"
+#include <stdio.h>
 
-void butler(void)       /* start of function definition */
+void butler(void) /* start of function definition */
 {
-    printf("You rang, sir?\n");
+  printf("You rang, sir?\n");
 }

@@ -1,17 +1,15 @@
 
 //  el2.c
 
-#include <stdio.h>
 #include "eatline.h"
+#include <stdio.h>
 
-void dmb(void)
-{
-    double m, b;
-    
-    scanf("%lf", &m);
-    eatline();
-    scanf("%lf", &b);
-    printf("%f %f\n", m, b);
-    return;
+void dmb(void) {
+  double m, b;
+
+  scanf("%lf", &m);
+  eatline();
+  scanf("%lf", &b);
+  printf("%f %f\n", m, b);
+  return;
 }
-
