@@ -7,7 +7,7 @@ int main(void)
 {
     printf("I will summon the butler function.\n");
     butler();
-    printf("Yes. Bring me some tea and %d writeable DVDs.\n", Sum(9, 10));
+    printf("Yes. Bring me some tea and %d writeable DVDs.\n", sum(9, 10));
 
     return 0;
 }
