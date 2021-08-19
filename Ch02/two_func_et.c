@@ -1,4 +1,5 @@
 //* two_func.c -- a program using three functions in three files */
+// gcc -o yuppers two_func_et.c butler.c dvds.c
 #include <stdio.h>
 
 #include "butler.h"
