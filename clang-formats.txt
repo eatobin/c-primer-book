@@ -1,3 +1,0 @@
-clang-format -i *.c
-clang-format -i *.h
-find . -regex '.*\.\(c\|h\)' -exec clang-format -style=file -i {} \;
