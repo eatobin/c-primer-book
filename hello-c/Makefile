@@ -20,11 +20,20 @@ least: least.o hello_fn.o
 least.o: least.c hello.h
 	gcc -c least.c
 
+both:
+	gcc -o both both.c hello_fn.c hello.h
+
 clean:
 	rm *.o most least
 
-hi-both:
-	gcc -o both both.c hello_fn.c hello.h
-
-bye-both:
+clean-both:
 	rm both
+
+run-most:
+	./most
+
+run-least:
+	./least
+
+run-both:
+	./both
