@@ -1,8 +1,8 @@
 /* shoes2.c -- calculates foot lengths for several sizes */
 #include <stdio.h>
-#define ADJUST 7.31 // one kind of symbolic constant
+#define ADJUST 7.31  // one kind of symbolic constant
 int main(void) {
-  const double SCALE = 0.333; // another kind of symbolic constant
+  const double SCALE = 0.333;  // another kind of symbolic constant
   double shoe, foot;
 
   printf("Shoe size (men's)    foot length\n");

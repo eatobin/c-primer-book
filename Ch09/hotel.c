@@ -1,5 +1,6 @@
 /* hotel.c -- hotel management functions */
 #include "hotel.h"
+
 #include <stdio.h>
 int menu(void) {
   int code, status;
@@ -11,8 +12,7 @@ int menu(void) {
   printf("5) quit\n");
   printf("%s%s\n", STARS, STARS);
   while ((status = scanf("%d", &code)) != 1 || (code < 1 || code > 5)) {
-    if (status != 1)
-      scanf("%*s"); // dispose of non-integer input
+    if (status != 1) scanf("%*s");  // dispose of non-integer input
     printf("Enter an integer from 1 to 5, please.\n");
   }
 
@@ -24,7 +24,7 @@ int getnights(void) {
 
   printf("How many nights are needed? ");
   while (scanf("%d", &nights) != 1) {
-    scanf("%*s"); // dispose of non-integer input
+    scanf("%*s");  // dispose of non-integer input
     printf("Please enter an integer, such as 2.\n");
   }
 
@@ -36,7 +36,6 @@ void showprice(double rate, int nights) {
   double total = 0.0;
   double factor = 1.0;
 
-  for (n = 1; n <= nights; n++, factor *= DISCOUNT)
-    total += rate * factor;
+  for (n = 1; n <= nights; n++, factor *= DISCOUNT) total += rate * factor;
   printf("The total cost will be $%0.2f.\n", total);
 }

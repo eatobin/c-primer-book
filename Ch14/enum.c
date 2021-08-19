@@ -1,7 +1,7 @@
 /* enum.c -- uses enumerated values */
-#include <stdbool.h> // C99 feature
+#include <stdbool.h>  // C99 feature
 #include <stdio.h>
-#include <string.h> // for strcmp(), strchr()
+#include <string.h>  // for strcmp(), strchr()
 char *s_gets(char *st, int n);
 
 enum spectrum { red, orange, yellow, green, blue, violet };
@@ -21,26 +21,25 @@ int main(void) {
         break;
       }
     }
-    if (color_is_found)
-      switch (color) {
-      case red:
-        puts("Roses are red.");
-        break;
-      case orange:
-        puts("Poppies are orange.");
-        break;
-      case yellow:
-        puts("Sunflowers are yellow.");
-        break;
-      case green:
-        puts("Grass is green.");
-        break;
-      case blue:
-        puts("Bluebells are blue.");
-        break;
-      case violet:
-        puts("Violets are violet.");
-        break;
+    if (color_is_found) switch (color) {
+        case red:
+          puts("Roses are red.");
+          break;
+        case orange:
+          puts("Poppies are orange.");
+          break;
+        case yellow:
+          puts("Sunflowers are yellow.");
+          break;
+        case green:
+          puts("Grass is green.");
+          break;
+        case blue:
+          puts("Bluebells are blue.");
+          break;
+        case violet:
+          puts("Violets are violet.");
+          break;
       }
     else
       printf("I don't know about the color %s.\n", choice);
@@ -58,12 +57,11 @@ char *s_gets(char *st, int n) {
 
   ret_val = fgets(st, n, stdin);
   if (ret_val) {
-    find = strchr(st, '\n'); // look for newline
-    if (find)                // if the address is not NULL,
-      *find = '\0';          // place a null character there
+    find = strchr(st, '\n');  // look for newline
+    if (find)                 // if the address is not NULL,
+      *find = '\0';           // place a null character there
     else
-      while (getchar() != '\n')
-        continue; // dispose of rest of line
+      while (getchar() != '\n') continue;  // dispose of rest of line
   }
   return ret_val;
 }

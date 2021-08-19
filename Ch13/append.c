@@ -8,10 +8,10 @@ void append(FILE *source, FILE *dest);
 char *s_gets(char *st, int n);
 
 int main(void) {
-  FILE *fa, *fs;       // fa for append file, fs for source file
-  int files = 0;       // number of files appended
-  char file_app[SLEN]; // name of append file
-  char file_src[SLEN]; // name of source file
+  FILE *fa, *fs;        // fa for append file, fs for source file
+  int files = 0;        // number of files appended
+  char file_app[SLEN];  // name of append file
+  char file_src[SLEN];  // name of source file
   int ch;
 
   puts("Enter name of destination file:");
@@ -49,8 +49,7 @@ int main(void) {
   printf("Done appending. %d files appended.\n", files);
   rewind(fa);
   printf("%s contents:\n", file_app);
-  while ((ch = getc(fa)) != EOF)
-    putchar(ch);
+  while ((ch = getc(fa)) != EOF) putchar(ch);
   puts("Done displaying.");
   fclose(fa);
 
@@ -59,7 +58,7 @@ int main(void) {
 
 void append(FILE *source, FILE *dest) {
   size_t bytes;
-  static char temp[BUFSIZE]; // allocate once
+  static char temp[BUFSIZE];  // allocate once
 
   while ((bytes = fread(temp, sizeof(char), BUFSIZE, source)) > 0)
     fwrite(temp, sizeof(char), bytes, dest);
@@ -71,12 +70,11 @@ char *s_gets(char *st, int n) {
 
   ret_val = fgets(st, n, stdin);
   if (ret_val) {
-    find = strchr(st, '\n'); // look for newline
-    if (find)                // if the address is not NULL,
-      *find = '\0';          // place a null character there
+    find = strchr(st, '\n');  // look for newline
+    if (find)                 // if the address is not NULL,
+      *find = '\0';           // place a null character there
     else
-      while (getchar() != '\n')
-        continue;
+      while (getchar() != '\n') continue;
   }
   return ret_val;
 }

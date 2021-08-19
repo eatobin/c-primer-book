@@ -3,7 +3,7 @@
 #define MAXTITL 41
 #define MAXAUTL 31
 
-struct book { // structure template: tag is book
+struct book {  // structure template: tag is book
   char title[MAXTITL];
   char author[MAXAUTL];
   float value;

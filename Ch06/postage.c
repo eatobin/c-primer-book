@@ -1,8 +1,8 @@
 // postage.c -- first-class postage rates
 #include <stdio.h>
 int main(void) {
-  const int FIRST_OZ = 46; // 2013 rate
-  const int NEXT_OZ = 20;  // 2013 rate
+  const int FIRST_OZ = 46;  // 2013 rate
+  const int NEXT_OZ = 20;   // 2013 rate
   int ounces, cost;
 
   printf(" ounces  cost\n");

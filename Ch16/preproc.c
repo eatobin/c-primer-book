@@ -1,7 +1,7 @@
 /* preproc.c -- simple preprocessor examples */
 #include <stdio.h>
 #define TWO 2 /* you can use comments if you like   */
-#define OW                                                                     \
+#define OW \
   "Consistency is the last refuge of the unimagina\
 tive. - Oscar Wilde" /* a backslash continues a definition */
 /* to the next line                   */

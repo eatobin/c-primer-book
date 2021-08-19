@@ -14,7 +14,7 @@ int main(void) {
   while (scanf("%f", &score) == 1) {
     if (score < MIN || score > MAX) {
       printf("%0.1f is an invalid value. Try again: ", score);
-      continue; // jumps to while loop test condition
+      continue;  // jumps to while loop test condition
     }
     printf("Accepting %0.1f:\n", score);
     min = (score < min) ? score : min;

@@ -31,8 +31,7 @@ char *itobs(int n, char *ps) {
   int i;
   const static int size = CHAR_BIT * sizeof(int);
 
-  for (i = size - 1; i >= 0; i--, n >>= 1)
-    ps[i] = (01 & n) + '0';
+  for (i = size - 1; i >= 0; i--, n >>= 1) ps[i] = (01 & n) + '0';
   ps[size] = '\0';
 
   return ps;
@@ -45,8 +44,7 @@ void show_bstr(const char *str) {
   while (str[i]) /* not the null character */
   {
     putchar(str[i]);
-    if (++i % 4 == 0 && str[i])
-      putchar(' ');
+    if (++i % 4 == 0 && str[i]) putchar(' ');
   }
 }
 

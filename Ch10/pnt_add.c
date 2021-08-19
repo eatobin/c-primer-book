@@ -8,7 +8,7 @@ int main(void) {
   double bills[SIZE];
   double *ptf;
 
-  pti = dates; // assign address of array to pointer
+  pti = dates;  // assign address of array to pointer
   ptf = bills;
   printf("%23s %15s\n", "short", "double");
   for (index = 0; index < SIZE; index++)

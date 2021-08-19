@@ -12,8 +12,7 @@ int main(void) {
 
   puts("What is your favorite flower?");
   s_gets(flower, SIZE);
-  if ((strlen(addon) + strlen(flower) + 1) <= SIZE)
-    strcat(flower, addon);
+  if ((strlen(addon) + strlen(flower) + 1) <= SIZE) strcat(flower, addon);
   puts(flower);
   puts("What is your favorite bug?");
   s_gets(bug, BUGSIZE);
@@ -29,13 +28,11 @@ char *s_gets(char *st, int n) {
 
   ret_val = fgets(st, n, stdin);
   if (ret_val) {
-    while (st[i] != '\n' && st[i] != '\0')
-      i++;
+    while (st[i] != '\n' && st[i] != '\0') i++;
     if (st[i] == '\n')
       st[i] = '\0';
-    else // must have words[i] == '\0'
-      while (getchar() != '\n')
-        continue;
+    else  // must have words[i] == '\0'
+      while (getchar() != '\n') continue;
   }
   return ret_val;
 }

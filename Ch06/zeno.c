@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 int main(void) {
-  int t_ct; // term count
+  int t_ct;  // term count
   double time, power_of_2;
   int limit;
 

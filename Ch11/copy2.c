@@ -1,6 +1,6 @@
 /* copy2.c -- strcpy() demo */
 #include <stdio.h>
-#include <string.h> // declares strcpy()
+#include <string.h>  // declares strcpy()
 #define WORDS "beast"
 #define SIZE 40
 

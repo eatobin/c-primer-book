@@ -1,5 +1,6 @@
 /* tree.c -- tree support functions */
 #include "tree.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -77,8 +78,7 @@ bool DeleteItem(const Item *pi, Tree *ptree) {
   Pair look;
 
   look = SeekItem(pi, ptree);
-  if (look.child == NULL)
-    return false;
+  if (look.child == NULL) return false;
 
   if (look.parent == NULL) /* delete root item       */
     DeleteNode(&ptree->root);
@@ -92,14 +92,11 @@ bool DeleteItem(const Item *pi, Tree *ptree) {
 }
 
 void Traverse(const Tree *ptree, void (*pfun)(Item item)) {
-
-  if (ptree != NULL)
-    InOrder(ptree->root, pfun);
+  if (ptree != NULL) InOrder(ptree->root, pfun);
 }
 
 void DeleteAll(Tree *ptree) {
-  if (ptree != NULL)
-    DeleteAllNodes(ptree->root);
+  if (ptree != NULL) DeleteAllNodes(ptree->root);
   ptree->root = NULL;
   ptree->size = 0;
 }
@@ -182,8 +179,7 @@ static Pair SeekItem(const Item *pi, const Tree *ptree) {
   look.parent = NULL;
   look.child = ptree->root;
 
-  if (look.child == NULL)
-    return look; /* early return   */
+  if (look.child == NULL) return look; /* early return   */
 
   while (look.child != NULL) {
     if (ToLeft(pi, &(look.child->item))) {
@@ -215,8 +211,7 @@ static void DeleteNode(Trnode **ptr)
   } else /* deleted node has two children */
   {
     /* find where to reattach right subtree */
-    for (temp = (*ptr)->left; temp->right != NULL; temp = temp->right)
-      continue;
+    for (temp = (*ptr)->left; temp->right != NULL; temp = temp->right) continue;
     temp->right = (*ptr)->right;
     temp = *ptr;
     *ptr = (*ptr)->left;

@@ -7,8 +7,7 @@ int main(void) {
 
   printf("How many pounds to a firkin of butter?\n");
   scanf("%d", &units);
-  while (units != 56)
-    critic();
+  while (units != 56) critic();
   printf("You must have looked it up!\n");
 
   return 0;

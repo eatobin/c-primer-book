@@ -1,8 +1,8 @@
 /* wheat.c -- exponential growth */
 #include <stdio.h>
-#define SQUARES 64 // squares on a checkerboard
+#define SQUARES 64  // squares on a checkerboard
 int main(void) {
-  const double CROP = 2E16; // world wheat production in wheat grains
+  const double CROP = 2E16;  // world wheat production in wheat grains
   double current, total;
   int count = 1;
 

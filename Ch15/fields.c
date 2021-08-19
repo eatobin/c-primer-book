@@ -1,5 +1,5 @@
 /* fields.c -- define and use fields */
-#include <stdbool.h> //C99, defines bool, true, false
+#include <stdbool.h>  //C99, defines bool, true, false
 #include <stdio.h>
 
 /* line styles     */
@@ -21,10 +21,10 @@ const char *colors[8] = {"black", "red",     "green", "yellow",
                          "blue",  "magenta", "cyan",  "white"};
 
 struct box_props {
-  bool opaque : 1; // or unsigned int (pre C99)
+  bool opaque : 1;  // or unsigned int (pre C99)
   unsigned int fill_color : 3;
   unsigned int : 4;
-  bool show_border : 1; // or unsigned int (pre C99)
+  bool show_border : 1;  // or unsigned int (pre C99)
   unsigned int border_color : 3;
   unsigned int border_style : 2;
   unsigned int : 2;
@@ -56,16 +56,16 @@ void show_settings(const struct box_props *pb) {
   printf("The border color is %s.\n", colors[pb->border_color]);
   printf("The border style is ");
   switch (pb->border_style) {
-  case SOLID:
-    printf("solid.\n");
-    break;
-  case DOTTED:
-    printf("dotted.\n");
-    break;
-  case DASHED:
-    printf("dashed.\n");
-    break;
-  default:
-    printf("unknown type.\n");
+    case SOLID:
+      printf("solid.\n");
+      break;
+    case DOTTED:
+      printf("dotted.\n");
+      break;
+    case DASHED:
+      printf("dashed.\n");
+      break;
+    default:
+      printf("unknown type.\n");
   }
 }

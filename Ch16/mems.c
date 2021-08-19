@@ -35,7 +35,6 @@ int main() {
 void show_array(const int ar[], int n) {
   int i;
 
-  for (i = 0; i < n; i++)
-    printf("%d ", ar[i]);
+  for (i = 0; i < n; i++) printf("%d ", ar[i]);
   putchar('\n');
 }

@@ -1,6 +1,7 @@
 /* diceroll.c -- dice role simulation */
 /* compile with mandydice.c           */
 #include "diceroll.h"
+
 #include <stdio.h>
 #include <stdlib.h> /* for library rand()   */
 
@@ -28,8 +29,7 @@ int roll_n_dice(int dice, int sides) {
     return -1;
   }
 
-  for (d = 0; d < dice; d++)
-    total += rollem(sides);
+  for (d = 0; d < dice; d++) total += rollem(sides);
 
   return total;
 }

@@ -1,6 +1,7 @@
 //  el1.c
-#include "eatline.h"
 #include <stdio.h>
+
+#include "eatline.h"
 void dmb(void);
 
 int main(void) {

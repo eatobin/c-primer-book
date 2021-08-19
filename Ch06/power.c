@@ -1,6 +1,6 @@
 // power.c -- raises numbers to integer powers
 #include <stdio.h>
-double power(double n, int p); // ANSI prototype
+double power(double n, int p);  // ANSI prototype
 int main(void) {
   double x, xpow;
   int exp;
@@ -9,7 +9,7 @@ int main(void) {
   printf(" to which\nthe number will be raised. Enter q");
   printf(" to quit.\n");
   while (scanf("%lf%d", &x, &exp) == 2) {
-    xpow = power(x, exp); // function call
+    xpow = power(x, exp);  // function call
     printf("%.3g to the power %d is %.5g\n", x, exp, xpow);
     printf("Enter next pair of numbers or q to quit.\n");
   }
@@ -18,13 +18,12 @@ int main(void) {
   return 0;
 }
 
-double power(double n, int p) // function definition
+double power(double n, int p)  // function definition
 {
   double pow = 1;
   int i;
 
-  for (i = 1; i <= p; i++)
-    pow *= n;
+  for (i = 1; i <= p; i++) pow *= n;
 
-  return pow; // return the value of pow
+  return pow;  // return the value of pow
 }

@@ -1,6 +1,7 @@
 // useheader.c -- use the names_st structure
-#include "names_st.h"
 #include <stdio.h>
+
+#include "names_st.h"
 // remember to link with names_st.c
 
 int main(void) {

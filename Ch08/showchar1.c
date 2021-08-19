@@ -20,8 +20,7 @@ void display(char cr, int lines, int width) {
   int row, col;
 
   for (row = 1; row <= lines; row++) {
-    for (col = 1; col <= width; col++)
-      putchar(cr);
+    for (col = 1; col <= width; col++) putchar(cr);
     putchar('\n'); /* end line and start a new one */
   }
 }

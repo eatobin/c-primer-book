@@ -1,11 +1,11 @@
 // talkback.c -- nosy, informative program
 #include <stdio.h>
-#include <string.h>  // for strlen() prototype
-#define DENSITY 62.4 // human density in lbs per cu ft
+#include <string.h>   // for strlen() prototype
+#define DENSITY 62.4  // human density in lbs per cu ft
 int main() {
   float weight, volume;
   int size, letters;
-  char name[40]; // name is an array of 40 chars
+  char name[40];  // name is an array of 40 chars
 
   printf("Hi! What's your first name?\n");
   scanf("%s", name);

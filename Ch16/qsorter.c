@@ -30,11 +30,9 @@ void showarray(const double ar[], int n) {
 
   for (index = 0; index < n; index++) {
     printf("%9.4f ", ar[index]);
-    if (index % 6 == 5)
-      putchar('\n');
+    if (index % 6 == 5) putchar('\n');
   }
-  if (index % 6 != 0)
-    putchar('\n');
+  if (index % 6 != 0) putchar('\n');
 }
 
 /* sort by increasing value */

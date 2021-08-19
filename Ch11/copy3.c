@@ -22,8 +22,7 @@ int main(void) {
     }
   }
   puts("Here are the words accepted:");
-  for (i = 0; i < LIM; i++)
-    puts(qwords[i]);
+  for (i = 0; i < LIM; i++) puts(qwords[i]);
 
   return 0;
 }
@@ -34,13 +33,11 @@ char *s_gets(char *st, int n) {
 
   ret_val = fgets(st, n, stdin);
   if (ret_val) {
-    while (st[i] != '\n' && st[i] != '\0')
-      i++;
+    while (st[i] != '\n' && st[i] != '\0') i++;
     if (st[i] == '\n')
       st[i] = '\0';
-    else // must have words[i] == '\0'
-      while (getchar() != '\n')
-        continue;
+    else  // must have words[i] == '\0'
+      while (getchar() != '\n') continue;
   }
   return ret_val;
 }

@@ -1,7 +1,8 @@
 /* use_q.c -- driver testing the Queue interface */
 /* compile with queue.c                          */
-#include "queue.h" /* defines Queue, Item       */
 #include <stdio.h>
+
+#include "queue.h" /* defines Queue, Item       */
 
 int main(void) {
   Queue line;

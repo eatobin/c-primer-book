@@ -14,13 +14,12 @@ int main(void) {
   return 0;
 }
 
-int sum(int ar[], int n) // how big an array?
+int sum(int ar[], int n)  // how big an array?
 {
   int i;
   int total = 0;
 
-  for (i = 0; i < n; i++)
-    total += ar[i];
+  for (i = 0; i < n; i++) total += ar[i];
   printf("The size of ar is %zd bytes.\n", sizeof ar);
 
   return total;

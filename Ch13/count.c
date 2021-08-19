@@ -1,10 +1,10 @@
 /* count.c -- using standard I/O */
 #include <stdio.h>
-#include <stdlib.h> // exit() prototype
+#include <stdlib.h>  // exit() prototype
 
 int main(int argc, char *argv[]) {
-  int ch;   // place to store each character as read
-  FILE *fp; // "file pointer"
+  int ch;    // place to store each character as read
+  FILE *fp;  // "file pointer"
   unsigned long count = 0;
   if (argc != 2) {
     printf("Usage: %s filename\n", argv[0]);
@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
     exit(EXIT_FAILURE);
   }
   while ((ch = getc(fp)) != EOF) {
-    putc(ch, stdout); // same as putchar(ch);
+    putc(ch, stdout);  // same as putchar(ch);
     count++;
   }
   fclose(fp);

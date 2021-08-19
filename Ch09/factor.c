@@ -23,17 +23,16 @@ int main(void) {
   return 0;
 }
 
-long fact(int n) // loop-based function
+long fact(int n)  // loop-based function
 {
   long ans;
 
-  for (ans = 1; n > 1; n--)
-    ans *= n;
+  for (ans = 1; n > 1; n--) ans *= n;
 
   return ans;
 }
 
-long rfact(int n) // recursive version
+long rfact(int n)  // recursive version
 {
   long ans;
 

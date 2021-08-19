@@ -26,8 +26,7 @@ int main(void) {
 
   rewind(pbooks); /* go to start of file     */
   while (count < MAXBKS && fread(&library[count], size, 1, pbooks) == 1) {
-    if (count == 0)
-      puts("Current contents of book.dat:");
+    if (count == 0) puts("Current contents of book.dat:");
     printf("%s by %s: $%.2f\n", library[count].title, library[count].author,
            library[count].value);
     count++;
@@ -46,10 +45,8 @@ int main(void) {
     s_gets(library[count].author, MAXAUTL);
     puts("Now enter the value.");
     scanf("%f", &library[count++].value);
-    while (getchar() != '\n')
-      continue; /* clear input line  */
-    if (count < MAXBKS)
-      puts("Enter the next title.");
+    while (getchar() != '\n') continue; /* clear input line  */
+    if (count < MAXBKS) puts("Enter the next title.");
   }
 
   if (count > 0) {
@@ -73,12 +70,11 @@ char *s_gets(char *st, int n) {
 
   ret_val = fgets(st, n, stdin);
   if (ret_val) {
-    find = strchr(st, '\n'); // look for newline
-    if (find)                // if the address is not NULL,
-      *find = '\0';          // place a null character there
+    find = strchr(st, '\n');  // look for newline
+    if (find)                 // if the address is not NULL,
+      *find = '\0';           // place a null character there
     else
-      while (getchar() != '\n')
-        continue; // dispose of rest of line
+      while (getchar() != '\n') continue;  // dispose of rest of line
   }
   return ret_val;
 }

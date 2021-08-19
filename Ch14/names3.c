@@ -1,18 +1,18 @@
 // names3.c -- use pointers and malloc()
 #include <stdio.h>
-#include <stdlib.h> // for malloc(), free()
-#include <string.h> // for strcpy(), strlen()
+#include <stdlib.h>  // for malloc(), free()
+#include <string.h>  // for strcpy(), strlen()
 #define SLEN 81
 struct namect {
-  char *fname; // using pointers
+  char *fname;  // using pointers
   char *lname;
   int letters;
 };
 
-void getinfo(struct namect *); // allocates memory
+void getinfo(struct namect *);  // allocates memory
 void makeinfo(struct namect *);
 void showinfo(const struct namect *);
-void cleanup(struct namect *); // free memory when done
+void cleanup(struct namect *);  // free memory when done
 char *s_gets(char *st, int n);
 
 int main(void) {
@@ -60,12 +60,11 @@ char *s_gets(char *st, int n) {
 
   ret_val = fgets(st, n, stdin);
   if (ret_val) {
-    find = strchr(st, '\n'); // look for newline
-    if (find)                // if the address is not NULL,
-      *find = '\0';          // place a null character there
+    find = strchr(st, '\n');  // look for newline
+    if (find)                 // if the address is not NULL,
+      *find = '\0';           // place a null character there
     else
-      while (getchar() != '\n')
-        continue; // dispose of rest of line
+      while (getchar() != '\n') continue;  // dispose of rest of line
   }
   return ret_val;
 }

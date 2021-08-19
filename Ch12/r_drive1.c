@@ -12,8 +12,7 @@ int main(void) {
   printf("Please enter your choice for seed.\n");
   while (scanf("%u", &seed) == 1) {
     srand1(seed); /* reset seed */
-    for (count = 0; count < 5; count++)
-      printf("%d\n", rand1());
+    for (count = 0; count < 5; count++) printf("%d\n", rand1());
     printf("Please enter next seed (q to quit):\n");
   }
   printf("Done\n");

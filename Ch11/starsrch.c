@@ -13,9 +13,10 @@ int main() {
       printf("Found: %s\n", list[i]);
       count++;
     }
-  printf("The list contained %d words beginning"
-         " with astro.\n",
-         count);
+  printf(
+      "The list contained %d words beginning"
+      " with astro.\n",
+      count);
 
   return 0;
 }

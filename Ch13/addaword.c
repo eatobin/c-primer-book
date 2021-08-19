@@ -20,11 +20,9 @@ int main(void) {
 
   puts("File contents:");
   rewind(fp); /* go back to beginning of file */
-  while (fscanf(fp, "%s", words) == 1)
-    puts(words);
+  while (fscanf(fp, "%s", words) == 1) puts(words);
   puts("Done!");
-  if (fclose(fp) != 0)
-    fprintf(stderr, "Error closing file\n");
+  if (fclose(fp) != 0) fprintf(stderr, "Error closing file\n");
 
   return 0;
 }

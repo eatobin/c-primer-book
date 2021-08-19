@@ -1,8 +1,9 @@
 /* films3.c -- using an ADT-style linked list */
 /* compile with list.c                        */
-#include "list.h" /* defines List, Item   */
 #include <stdio.h>
 #include <stdlib.h> /* prototype for exit() */
+
+#include "list.h" /* defines List, Item   */
 void showmovies(Item item);
 char *s_gets(char *st, int n);
 int main(void) {
@@ -21,8 +22,7 @@ int main(void) {
   while (s_gets(temp.title, TSIZE) != NULL && temp.title[0] != '\0') {
     puts("Enter your rating <0-10>:");
     scanf("%d", &temp.rating);
-    while (getchar() != '\n')
-      continue;
+    while (getchar() != '\n') continue;
     if (AddItem(temp, &movies) == false) {
       fprintf(stderr, "Problem allocating memory\n");
       break;
@@ -60,12 +60,11 @@ char *s_gets(char *st, int n) {
 
   ret_val = fgets(st, n, stdin);
   if (ret_val) {
-    find = strchr(st, '\n'); // look for newline
-    if (find)                // if the address is not NULL,
-      *find = '\0';          // place a null character there
+    find = strchr(st, '\n');  // look for newline
+    if (find)                 // if the address is not NULL,
+      *find = '\0';           // place a null character there
     else
-      while (getchar() != '\n')
-        continue; // dispose of rest of line
+      while (getchar() != '\n') continue;  // dispose of rest of line
   }
   return ret_val;
 }

@@ -21,7 +21,6 @@ void starbar(void) /* define the function    */
 {
   int count;
 
-  for (count = 1; count <= WIDTH; count++)
-    putchar('*');
+  for (count = 1; count <= WIDTH; count++) putchar('*');
   putchar('\n');
 }

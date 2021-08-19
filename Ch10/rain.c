@@ -1,8 +1,8 @@
 /* rain.c  -- finds yearly totals, yearly average, and monthly
  average for several years of rainfall data */
 #include <stdio.h>
-#define MONTHS 12 // number of months in a year
-#define YEARS 5   // number of years of data
+#define MONTHS 12  // number of months in a year
+#define YEARS 5    // number of years of data
 int main(void) {
   // initializing rainfall data for 2010 - 2014
   const float rain[YEARS][MONTHS] = {
@@ -16,11 +16,11 @@ int main(void) {
 
   printf(" YEAR    RAINFALL  (inches)\n");
   for (year = 0, total = 0; year < YEARS;
-       year++) { // for each year, sum rainfall for each month
+       year++) {  // for each year, sum rainfall for each month
     for (month = 0, subtot = 0; month < MONTHS; month++)
       subtot += rain[year][month];
     printf("%5d %15.1f\n", 2010 + year, subtot);
-    total += subtot; // total for all years
+    total += subtot;  // total for all years
   }
   printf("\nThe yearly average is %.1f inches.\n\n", total / YEARS);
   printf("MONTHLY AVERAGES:\n\n");
@@ -28,7 +28,7 @@ int main(void) {
   printf(" Nov  Dec\n");
 
   for (month = 0; month < MONTHS;
-       month++) { // for each month, sum rainfall over years
+       month++) {  // for each month, sum rainfall over years
     for (year = 0, subtot = 0; year < YEARS; year++)
       subtot += rain[year][month];
     printf("%4.1f ", subtot / YEARS);

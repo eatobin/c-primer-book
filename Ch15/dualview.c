@@ -37,7 +37,6 @@
 const char *colors[8] = {"black", "red",     "green", "yellow",
                          "blue",  "magenta", "cyan",  "white"};
 struct box_props {
-
   bool opaque : 1;
   unsigned int fill_color : 3;
   unsigned int : 4;
@@ -90,17 +89,17 @@ void show_settings(const struct box_props *pb) {
   printf("The border color is %s.\n", colors[pb->border_color]);
   printf("The border style is ");
   switch (pb->border_style) {
-  case SOLID:
-    printf("solid.\n");
-    break;
-  case DOTTED:
-    printf("dotted.\n");
-    break;
-  case DASHED:
-    printf("dashed.\n");
-    break;
-  default:
-    printf("unknown type.\n");
+    case SOLID:
+      printf("solid.\n");
+      break;
+    case DOTTED:
+      printf("dotted.\n");
+      break;
+    case DASHED:
+      printf("dashed.\n");
+      break;
+    default:
+      printf("unknown type.\n");
   }
 }
 
@@ -110,17 +109,17 @@ void show_settings1(unsigned short us) {
   printf("Border %s.\n", (us & BORDER) == BORDER ? "shown" : "not shown");
   printf("The border style is ");
   switch (us & STYLE_MASK) {
-  case B_SOLID:
-    printf("solid.\n");
-    break;
-  case B_DOTTED:
-    printf("dotted.\n");
-    break;
-  case B_DASHED:
-    printf("dashed.\n");
-    break;
-  default:
-    printf("unknown type.\n");
+    case B_SOLID:
+      printf("solid.\n");
+      break;
+    case B_DOTTED:
+      printf("dotted.\n");
+      break;
+    case B_DASHED:
+      printf("dashed.\n");
+      break;
+    default:
+      printf("unknown type.\n");
   }
   printf("The border color is %s.\n", colors[(us >> 9) & 07]);
 }
@@ -129,8 +128,7 @@ char *itobs(int n, char *ps) {
   int i;
   const static int size = CHAR_BIT * sizeof(int);
 
-  for (i = size - 1; i >= 0; i--, n >>= 1)
-    ps[i] = (01 & n) + '0';
+  for (i = size - 1; i >= 0; i--, n >>= 1) ps[i] = (01 & n) + '0';
   ps[size] = '\0';
 
   return ps;

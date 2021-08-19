@@ -7,7 +7,7 @@ int main(void) {
   printf("Doing it right: ");
   printf("%d minus %d is %d\n", ten, 2, ten - two);
   printf("Doing it wrong: ");
-  printf("%d minus %d is %d\n", ten); // forgot 2 arguments
+  printf("%d minus %d is %d\n", ten);  // forgot 2 arguments
 
   return 0;
 }

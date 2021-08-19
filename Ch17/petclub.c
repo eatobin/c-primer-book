@@ -1,8 +1,9 @@
 /* petclub.c -- use a binary search tree */
-#include "tree.h"
 #include <ctype.h>
 #include <stdio.h>
 #include <string.h>
+
+#include "tree.h"
 
 char menu(void);
 void addpet(Tree *pt);
@@ -20,23 +21,23 @@ int main(void) {
   InitializeTree(&pets);
   while ((choice = menu()) != 'q') {
     switch (choice) {
-    case 'a':
-      addpet(&pets);
-      break;
-    case 'l':
-      showpets(&pets);
-      break;
-    case 'f':
-      findpet(&pets);
-      break;
-    case 'n':
-      printf("%d pets in club\n", TreeItemCount(&pets));
-      break;
-    case 'd':
-      droppet(&pets);
-      break;
-    default:
-      puts("Switching error");
+      case 'a':
+        addpet(&pets);
+        break;
+      case 'l':
+        showpets(&pets);
+        break;
+      case 'f':
+        findpet(&pets);
+        break;
+      case 'n':
+        printf("%d pets in club\n", TreeItemCount(&pets));
+        break;
+      case 'd':
+        droppet(&pets);
+        break;
+      default:
+        puts("Switching error");
     }
   }
   DeleteAll(&pets);
@@ -149,12 +150,11 @@ char *s_gets(char *st, int n) {
 
   ret_val = fgets(st, n, stdin);
   if (ret_val) {
-    find = strchr(st, '\n'); // look for newline
-    if (find)                // if the address is not NULL,
-      *find = '\0';          // place a null character there
+    find = strchr(st, '\n');  // look for newline
+    if (find)                 // if the address is not NULL,
+      *find = '\0';           // place a null character there
     else
-      while (getchar() != '\n')
-        continue; // dispose of rest of line
+      while (getchar() != '\n') continue;  // dispose of rest of line
   }
   return ret_val;
 }

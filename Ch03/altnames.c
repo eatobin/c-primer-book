@@ -1,8 +1,8 @@
 /* altnames.c -- portable names for integer types */
-#include <inttypes.h> // supports portable types
+#include <inttypes.h>  // supports portable types
 #include <stdio.h>
 int main(void) {
-  int32_t me32; // me32 a 32-bit signed variable
+  int32_t me32;  // me32 a 32-bit signed variable
 
   me32 = 45933945;
   printf("First, assume int32_t is int: ");

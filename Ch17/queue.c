@@ -1,5 +1,6 @@
 /* queue.c -- the Queue type implementation*/
 #include "queue.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -21,8 +22,7 @@ int QueueItemCount(const Queue *pq) { return pq->items; }
 bool EnQueue(Item item, Queue *pq) {
   Node *pnew;
 
-  if (QueueIsFull(pq))
-    return false;
+  if (QueueIsFull(pq)) return false;
   pnew = (Node *)malloc(sizeof(Node));
   if (pnew == NULL) {
     fprintf(stderr, "Unable to allocate memory!\n");
@@ -43,15 +43,13 @@ bool EnQueue(Item item, Queue *pq) {
 bool DeQueue(Item *pitem, Queue *pq) {
   Node *pt;
 
-  if (QueueIsEmpty(pq))
-    return false;
+  if (QueueIsEmpty(pq)) return false;
   CopyToItem(pq->front, pitem);
   pt = pq->front;
   pq->front = pq->front->next;
   free(pt);
   pq->items--;
-  if (pq->items == 0)
-    pq->rear = NULL;
+  if (pq->items == 0) pq->rear = NULL;
 
   return true;
 }
@@ -59,8 +57,7 @@ bool DeQueue(Item *pitem, Queue *pq) {
 /* empty the queue                */
 void EmptyTheQueue(Queue *pq) {
   Item dummy;
-  while (!QueueIsEmpty(pq))
-    DeQueue(&dummy, pq);
+  while (!QueueIsEmpty(pq)) DeQueue(&dummy, pq);
 }
 
 /* Local functions                 */

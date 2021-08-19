@@ -3,8 +3,7 @@
 int main(void) {
   char ch;
 
-  while ((ch = getchar()) != '#')
-    putchar(ch);
+  while ((ch = getchar()) != '#') putchar(ch);
 
   return 0;
 }

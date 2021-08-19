@@ -1,6 +1,6 @@
 /* paint.c -- uses conditional operator */
 #include <stdio.h>
-#define COVERAGE 350 // square feet per paint can
+#define COVERAGE 350  // square feet per paint can
 int main(void) {
   int sq_feet;
   int cans;

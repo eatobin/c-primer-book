@@ -12,11 +12,10 @@ int main(void) {
   int morejunk[ROWS - 1][COLS + 2] = {{20, 30, 40, 50, 60, 70},
                                       {5, 6, 7, 8, 9, 10}};
 
-  int varr[rs][cs]; // VLA
+  int varr[rs][cs];  // VLA
 
   for (i = 0; i < rs; i++)
-    for (j = 0; j < cs; j++)
-      varr[i][j] = i * j + j;
+    for (j = 0; j < cs; j++) varr[i][j] = i * j + j;
 
   printf("3x5 array\n");
   printf("Sum of all elements = %d\n", sum2d(ROWS, COLS, junk));
@@ -37,8 +36,7 @@ int sum2d(int rows, int cols, int ar[rows][cols]) {
   int tot = 0;
 
   for (r = 0; r < rows; r++)
-    for (c = 0; c < cols; c++)
-      tot += ar[r][c];
+    for (c = 0; c < cols; c++) tot += ar[r][c];
 
   return tot;
 }

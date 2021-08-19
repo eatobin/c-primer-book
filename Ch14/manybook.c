@@ -25,10 +25,8 @@ int main(void) {
     s_gets(library[count].author, MAXAUTL);
     printf("Now enter the value.\n");
     scanf("%f", &library[count++].value);
-    while (getchar() != '\n')
-      continue; /* clear input line         */
-    if (count < MAXBKS)
-      printf("Enter the next title.\n");
+    while (getchar() != '\n') continue; /* clear input line         */
+    if (count < MAXBKS) printf("Enter the next title.\n");
   }
 
   if (count > 0) {
@@ -48,12 +46,11 @@ char *s_gets(char *st, int n) {
 
   ret_val = fgets(st, n, stdin);
   if (ret_val) {
-    find = strchr(st, '\n'); // look for newline
-    if (find)                // if the address is not NULL,
-      *find = '\0';          // place a null character there
+    find = strchr(st, '\n');  // look for newline
+    if (find)                 // if the address is not NULL,
+      *find = '\0';           // place a null character there
     else
-      while (getchar() != '\n')
-        continue; // dispose of rest of line
+      while (getchar() != '\n') continue;  // dispose of rest of line
   }
   return ret_val;
 }

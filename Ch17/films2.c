@@ -27,8 +27,7 @@ int main(void) {
     strcpy(current->title, input);
     puts("Enter your rating <0-10>:");
     scanf("%d", &current->rating);
-    while (getchar() != '\n')
-      continue;
+    while (getchar() != '\n') continue;
     puts("Enter next movie title (empty line to stop):");
     prev = current;
   }
@@ -61,12 +60,11 @@ char *s_gets(char *st, int n) {
 
   ret_val = fgets(st, n, stdin);
   if (ret_val) {
-    find = strchr(st, '\n'); // look for newline
-    if (find)                // if the address is not NULL,
-      *find = '\0';          // place a null character there
+    find = strchr(st, '\n');  // look for newline
+    if (find)                 // if the address is not NULL,
+      *find = '\0';           // place a null character there
     else
-      while (getchar() != '\n')
-        continue; // dispose of rest of line
+      while (getchar() != '\n') continue;  // dispose of rest of line
   }
   return ret_val;
 }

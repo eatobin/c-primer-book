@@ -9,14 +9,13 @@ int main(void) {
 
   printf("Enter %d golf scores:\n", SIZE);
   for (index = 0; index < SIZE; index++)
-    scanf("%d", &score[index]); // read in the ten scores
+    scanf("%d", &score[index]);  // read in the ten scores
   printf("The scores read in are as follows:\n");
   for (index = 0; index < SIZE; index++)
-    printf("%5d", score[index]); // verify input
+    printf("%5d", score[index]);  // verify input
   printf("\n");
-  for (index = 0; index < SIZE; index++)
-    sum += score[index];       // add them up
-  average = (float)sum / SIZE; // time-honored method
+  for (index = 0; index < SIZE; index++) sum += score[index];  // add them up
+  average = (float)sum / SIZE;  // time-honored method
   printf("Sum of scores = %d, average = %.2f\n", sum, average);
   printf("That's a handicap of %.0f.\n", average - PAR);
 

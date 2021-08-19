@@ -6,13 +6,13 @@ const char *msgs[5] = {"    Thank you for the wonderful evening, ",
                        "is a special kind of guy. We must get together",
                        "over a delicious ", " and have a few laughs"};
 
-struct names { // first structure
+struct names {  // first structure
   char first[LEN];
   char last[LEN];
 };
 
-struct guy {           // second structure
-  struct names handle; // nested structure
+struct guy {            // second structure
+  struct names handle;  // nested structure
   char favfood[LEN];
   char job[LEN];
   float income;

@@ -1,9 +1,10 @@
 /* manydice.c -- multiple dice rolls                    */
 /* compile with diceroll.c                              */
-#include "diceroll.h" /* for roll_n_dice()   */
 #include <stdio.h>
 #include <stdlib.h> /* for library srand() */
 #include <time.h>   /* for time()          */
+
+#include "diceroll.h" /* for roll_n_dice()   */
 /* and for roll_count  */
 int main(void) {
   int dice, roll;
@@ -20,8 +21,7 @@ int main(void) {
       else {
         printf("You should have entered an integer.");
         printf(" Let's begin again.\n");
-        while (getchar() != '\n')
-          continue; /* dispose of bad input */
+        while (getchar() != '\n') continue; /* dispose of bad input */
         printf("How many sides? Enter 0 to stop.\n");
         continue; /* new loop cycle       */
       }

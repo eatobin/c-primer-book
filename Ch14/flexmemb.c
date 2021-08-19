@@ -5,7 +5,7 @@
 struct flex {
   size_t count;
   double average;
-  double scores[]; // flexible array member
+  double scores[];  // flexible array member
 };
 
 void showFlex(const struct flex *p);
@@ -45,7 +45,6 @@ int main(void) {
 void showFlex(const struct flex *p) {
   int i;
   printf("Scores : ");
-  for (i = 0; i < p->count; i++)
-    printf("%g ", p->scores[i]);
+  for (i = 0; i < p->count; i++) printf("%g ", p->scores[i]);
   printf("\nAverage: %g\n", p->average);
 }

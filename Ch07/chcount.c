@@ -6,8 +6,7 @@ int main(void) {
   int charcount = 0;
 
   while ((ch = getchar()) != PERIOD) {
-    if (ch != '"' && ch != '\'')
-      charcount++;
+    if (ch != '"' && ch != '\'') charcount++;
   }
   printf("There are %d non-quote characters.\n", charcount);
 

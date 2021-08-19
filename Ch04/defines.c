@@ -1,6 +1,6 @@
 // defines.c -- uses defined constants from limit.h and float.
-#include <float.h>  // floating-point limits
-#include <limits.h> // integer limits
+#include <float.h>   // floating-point limits
+#include <limits.h>  // integer limits
 #include <stdio.h>
 int main(void) {
   printf("Some number limits for this system:\n");

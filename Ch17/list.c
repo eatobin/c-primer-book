@@ -1,5 +1,6 @@
 /* list.c -- functions supporting list operations */
 #include "list.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -53,17 +54,15 @@ bool AddItem(Item item, List *plist) {
   Node *scan = *plist;
 
   pnew = (Node *)malloc(sizeof(Node));
-  if (pnew == NULL)
-    return false; /* quit function on failure  */
+  if (pnew == NULL) return false; /* quit function on failure  */
 
   CopyToNode(item, pnew);
   pnew->next = NULL;
   if (scan == NULL) /* empty list, so place */
     *plist = pnew;  /* pnew at head of list */
   else {
-    while (scan->next != NULL)
-      scan = scan->next; /* find end of list    */
-    scan->next = pnew;   /* add pnew to end     */
+    while (scan->next != NULL) scan = scan->next; /* find end of list    */
+    scan->next = pnew;                            /* add pnew to end     */
   }
 
   return true;

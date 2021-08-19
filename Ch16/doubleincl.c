@@ -1,7 +1,8 @@
 // doubincl.c -- include header twice
-#include "names.h"
-#include "names.h" // accidental second inclusion
 #include <stdio.h>
+
+#include "names.h"
+#include "names.h"  // accidental second inclusion
 
 int main() {
   names winner = {"Less", "Ismoor"};

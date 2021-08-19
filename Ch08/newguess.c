@@ -14,8 +14,7 @@ int main(void) {
       printf("Well, then, is it %d?\n", ++guess);
     else
       printf("Sorry, I understand only y or n.\n");
-    while (getchar() != '\n')
-      continue; /* skip rest of input line */
+    while (getchar() != '\n') continue; /* skip rest of input line */
   }
   printf("I knew I could do it!\n");
 

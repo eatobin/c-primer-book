@@ -12,8 +12,7 @@ int main() {
   FILE *iofile;
 
   // create a set of double values
-  for (i = 0; i < ARSIZE; i++)
-    numbers[i] = 100.0 * i + 1.0 / (i + 1);
+  for (i = 0; i < ARSIZE; i++) numbers[i] = 100.0 * i + 1.0 / (i + 1);
   // attempt to open file
   if ((iofile = fopen(file, "wb")) == NULL) {
     fprintf(stderr, "Could not open %s for output.\n", file);
@@ -29,8 +28,8 @@ int main() {
   // read selected items from file
   printf("Enter an index in the range 0-%d.\n", ARSIZE - 1);
   while (scanf("%d", &i) == 1 && i >= 0 && i < ARSIZE) {
-    pos = (long)i * sizeof(double); // calculate offset
-    fseek(iofile, pos, SEEK_SET);   // go there
+    pos = (long)i * sizeof(double);  // calculate offset
+    fseek(iofile, pos, SEEK_SET);    // go there
     fread(&value, sizeof(double), 1, iofile);
     printf("The value there is %f.\n", value);
     printf("Next index (out of range to quit):\n");

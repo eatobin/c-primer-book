@@ -1,8 +1,9 @@
 
 //  el2.c
 
-#include "eatline.h"
 #include <stdio.h>
+
+#include "eatline.h"
 
 void dmb(void) {
   double m, b;
