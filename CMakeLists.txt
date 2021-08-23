@@ -4,5 +4,7 @@ project(c_primer_book C)
 
 set(CMAKE_C_STANDARD 11)
 
-#add_executable(c_primer_book
-#        Ch01/listing1.c)
+add_executable(c_primer_book
+        Ch02/butler/two_func_et.c
+        Ch02/butler/butler.c
+        Ch02/butler/dvds.c)
