@@ -1,8 +1,8 @@
 /* badcount.c -- incorrect argument counts */
 #include <stdio.h>
 int main(void) {
-  int n = 4;
-  int m = 5;
+  int   n = 4;
+  int   m = 5;
   float f = 7.0f;
   float g = 8.0f;
 
