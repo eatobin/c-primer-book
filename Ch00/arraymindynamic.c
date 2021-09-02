@@ -14,7 +14,7 @@ int main(void) {
     return -1;
   }
 
-  printf("Enter 5 integers: ");
+  printf("Enter 5 integers:\n");
   scanf("%d %d %d %d %d", &candidate[0], &candidate[1], &candidate[2],
         &candidate[3], &candidate[4]);
 
