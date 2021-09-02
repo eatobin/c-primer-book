@@ -4,27 +4,27 @@
 #include <stdlib.h>
 
 int main(void) {
-  int *candidates;
+  int *candidate;
   int  currentMin;
 
-  candidates = malloc(5 * sizeof(*candidates));
+  candidate = malloc(5 * sizeof(*candidate));
 
-  if (candidates == NULL) {
+  if (candidate == NULL) {
     fprintf(stderr, "malloc failed\n");
     return -1;
   }
 
   printf("Enter 5 integers: ");
-  scanf("%d %d %d %d %d", &candidates[0], &candidates[1], &candidates[2],
-        &candidates[3], &candidates[4]);
+  scanf("%d %d %d %d %d", &candidate[0], &candidate[1], &candidate[2],
+        &candidate[3], &candidate[4]);
 
-  currentMin = candidates[0];
+  currentMin = candidate[0];
 
   for (int i = 0; i < 5; ++i) {
-    if (candidates[i] < currentMin) currentMin = candidates[i];
+    if (candidate[i] < currentMin) currentMin = candidate[i];
   }
 
   printf("The min is: %d", currentMin);
-  free(candidates);
+  free(candidate);
   return 0;
 }
