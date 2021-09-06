@@ -13,9 +13,9 @@ struct names {  // first structure
 
 struct guy {            // second structure
   struct names handle;  // nested structure
-  char favfood[LEN];
-  char job[LEN];
-  float income;
+  char         favfood[LEN];
+  char         job[LEN];
+  double       income;
 };
 
 int main(void) {
