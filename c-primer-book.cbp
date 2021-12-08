@@ -31,7 +31,7 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="Ch02/ex_2_8.c">
+		<Unit filename="Ch02/ex_2_4.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions />
